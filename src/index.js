@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-client';
 import { HttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
@@ -20,6 +21,8 @@ const httpLink = new HttpLink({
   },
 });
 
+console.log('httpLink för 17', httpLink);
+
 const cache = new InMemoryCache();
 
 const client = new ApolloClient({
@@ -28,7 +31,9 @@ const client = new ApolloClient({
 });
 
 ReactDOM.render(
-  <App />,
+  <ApolloProvider client={client}>
+    <App />
+  </ApolloProvider>,
   document.getElementById('root')
 );
 
