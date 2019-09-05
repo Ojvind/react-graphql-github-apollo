@@ -5,9 +5,7 @@ import Navigation from './Navigation';
 import Footer from './Footer';
 import Profile from '../Profile';
 import Organization from '../Organization';
-
 import * as routes from '../constants/routes';
-
 import './style.css';
 
 class App extends Component {
@@ -57,5 +55,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;
