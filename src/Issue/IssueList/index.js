@@ -82,6 +82,11 @@ const Issues = ({
           if (loading && !repository) {
             return <Loading />;
           }
+
+          if (!repository.issues.edges.length) {
+            return <div className="IssueList">No issues ...</div>;
+          }
+
           return <IssueList issues={repository.issues} />
         }}
       </Query>
