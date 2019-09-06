@@ -8,7 +8,6 @@
   display: flex;
   align-items: baseline;
 }
-
 @media only screen and (max-device-width: 480px) {
   .Navigation {
     flex-direction: column;
@@ -16,7 +15,6 @@
     align-items: center;
   }
 }
-
 .Navigation-link {
   font-size: 12px;
   letter-spacing: 3.5px;
@@ -25,20 +23,16 @@
   padding: 20px;
   text-decoration: none;
 }
-
 .Navigation-link a {
   color: #ffffff;
 }
-
 .Navigation-search {
   padding: 0 10px;
 }
-
 @media only screen and (max-device-width: 480px) {
   .Navigation-link {
     padding: 10px;
   }
-
   .Navigation-search {
     padding: 10px 10px;
   }
